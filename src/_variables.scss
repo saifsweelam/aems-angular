@@ -1,0 +1,15 @@
+// Colors
+$primary-color: #043577;
+$gradient-color: rgba(lighten($primary-color, 61%), 30%);
+
+// Screen sizes
+$screen-smallest: 214px;
+$screen-phone: 375px;
+$screen-phone-landscape: 576px;
+$screen-tablet: 768px;
+$screen-tablet-landscape: 992px;
+$screen-desktop: 1200px;
+$screen-largest: 1400px;
+
+// Font style
+$font-family: 'Inter', sans-serif;
