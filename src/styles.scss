@@ -5,6 +5,11 @@ body {
     font-family: $font-family;
 }
 
+*:focus {
+    box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 50%);
+    outline: 0;
+}
+
 .bg-primary {
     background-color: $primary-color;
 }
@@ -28,13 +33,13 @@ body {
     outline: none;
     text-decoration: none;
     border-radius: 10px;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem 1rem;
     transition: background-color 0.4s;
 }
 
 .btn-primary {
     background-color: $primary-color;
-    color: #FFF;
+    color: #FFF !important;
     fill: #FFF;
 
     &:hover, &:focus {
@@ -44,10 +49,14 @@ body {
 
 .btn-white {
     background-color: #FFF;
-    color: $primary-color;
+    color: $primary-color !important;
     fill: $primary-color;
 
     &:hover, &:focus {
         background-color: darken(#FFF, 10%);
     }
+}
+
+.hidden {
+    display: none;
 }

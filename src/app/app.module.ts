@@ -3,24 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './parts/header/header.component';
+import { SectionHeaderComponent } from './parts/section-header/section-header.component';
 import { FooterComponent } from './parts/footer/footer.component';
 import { NavComponent } from './parts/nav/nav.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AdmissionComponent } from './pages/admission/admission.component';
 import { LearningComponent } from './pages/learning/learning.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
+import { LandingHeaderComponent } from './parts/landing-header/landing-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    SectionHeaderComponent,
     FooterComponent,
     NavComponent,
     HomeComponent,
     AdmissionComponent,
     LearningComponent,
-    GalleryComponent
+    GalleryComponent,
+    LandingHeaderComponent
   ],
   imports: [
     BrowserModule,
