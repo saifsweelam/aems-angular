@@ -7,13 +7,7 @@
     flex-wrap: wrap;
     padding: 0.5rem 1rem;
     z-index: 999999;
-    position: sticky;
-    background-color: $primary-color;
     color: #FFF;
-
-    &.transparent {
-        background-color: #FFF0;
-    }
 
     .nav-logo-container {
         display: flex;
@@ -111,7 +105,6 @@
             height: 0;
             overflow: hidden;
             text-align: center;
-            background-color: $primary-color;
             transition: height 0.4s;
 
             .nav-menu-links {

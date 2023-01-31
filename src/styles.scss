@@ -1,5 +1,9 @@
 @import './variables';
 
+html {
+    font-size: calc(13px + (16 - 13) * ((100vw - 214px) / (1400 - 214)));
+}
+
 body {
     color: $primary-color;
     font-family: $font-family;
@@ -8,6 +12,22 @@ body {
 *:focus {
     box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 50%);
     outline: 0;
+}
+
+#navComponent {
+    position: fixed;
+    top: 0;
+    transition: background-color 0.4s;
+    background-color: $primary-color;
+
+    &.transparent {
+        position: fixed;
+        background-color: #FFF0;
+
+        &:has(#toggleMenu:checked) {
+            background-color: $primary-color;
+        }
+    }
 }
 
 .bg-primary {
@@ -32,7 +52,7 @@ body {
     border: none;
     outline: none;
     text-decoration: none;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 0.5rem 1rem;
     transition: background-color 0.4s;
 }
@@ -42,7 +62,8 @@ body {
     color: #FFF !important;
     fill: #FFF;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         background-color: darken($primary-color, 10%);
     }
 }
@@ -52,7 +73,8 @@ body {
     color: $primary-color !important;
     fill: $primary-color;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
         background-color: darken(#FFF, 10%);
     }
 }

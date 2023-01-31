@@ -1,0 +1,45 @@
+@import '../../../variables';
+
+#landingHeader {
+    background-image: url('../../../assets/img/placeholder/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        padding: 3rem;
+        color: #FFF;
+
+        .header-title {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+
+    @media screen and (max-width: $screen-tablet) {
+        .header-container {
+            justify-content: center;
+            min-height: 100vw;
+            background: linear-gradient(rgba($primary-color, 40%) 40%, $primary-color);
+            text-align: center;
+
+            .header-title {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    @media screen and (min-width: $screen-tablet) {
+        .header-container {
+            justify-content: flex-start;
+            min-height: 100vh;
+            background: linear-gradient(90deg, $primary-color 40%, #FFF0);
+
+            .header-title {
+                font-size: 3rem;
+            }
+        }
+    }
+}
