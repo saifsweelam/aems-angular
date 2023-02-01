@@ -21,7 +21,6 @@ body {
     background-color: $primary-color;
 
     &.transparent {
-        position: fixed;
         background-color: #FFF0;
 
         &:has(#toggleMenu:checked) {
@@ -49,6 +48,7 @@ body {
 }
 
 .btn {
+    display: inline-block;
     border: none;
     outline: none;
     text-decoration: none;

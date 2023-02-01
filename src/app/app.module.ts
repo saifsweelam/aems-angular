@@ -11,6 +11,8 @@ import { AdmissionComponent } from './pages/admission/admission.component';
 import { LearningComponent } from './pages/learning/learning.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { LandingHeaderComponent } from './parts/landing-header/landing-header.component';
+import { InlineSVGModule } from 'ng-inline-svg-2';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { LandingHeaderComponent } from './parts/landing-header/landing-header.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    InlineSVGModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
