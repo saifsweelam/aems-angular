@@ -1,7 +1,7 @@
 @import './variables';
 
 html {
-    font-size: calc(13px + (16 - 13) * ((100vw - 214px) / (1400 - 214)));
+    font-size: calc(#{$text-smallest} + #{strip-unit($text-largest - $text-smallest)} * ((100vw - #{$screen-smallest}) / #{strip-unit($screen-largest - $screen-smallest)}));
 }
 
 body {

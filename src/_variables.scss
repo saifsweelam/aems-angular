@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // Colors
 $primary-color: #043577;
 $gradient-color: rgba(lighten($primary-color, 61%), 30%);
@@ -13,3 +15,11 @@ $screen-largest: 1400px;
 
 // Font style
 $font-family: 'Inter', sans-serif;
+
+// Fluid Typography Settings
+$text-smallest: 13px;
+$text-largest: 17px;
+
+@function strip-unit($number) {
+  @return math.div($number, ($number * 0 + 1));
+}
