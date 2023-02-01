@@ -1,0 +1,66 @@
+@import '../../../variables';
+
+$background-color: #D2D2D2;
+$foreground-color: #303030;
+
+#footer {
+    background-color: $background-color;
+    color: $foreground-color;
+    fill: $foreground-color;
+
+    .footer-content {
+        a {
+            color: $foreground-color;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .footer-logo {
+            max-width: 300px;
+            padding: 2rem;
+            margin: auto;
+        }
+
+        h3 {
+            font-weight: 700;
+        }
+    }
+
+    .footer-credit {
+        width: 90%;
+        margin: auto;
+        padding: 2rem 0 1rem 0;
+        border-top: 1px solid $foreground-color;
+        text-align: center;
+    }
+
+    @media screen and (max-width: $screen-tablet) {
+        .footer-content {
+            padding: 2rem;
+        }
+    }
+
+    @media screen and (min-width: $screen-tablet) {
+        .footer-content {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 2rem 0;
+
+            .footer-logo {
+                width: 15%;
+            }
+
+            #contact {
+                width: 40%;
+            }
+
+            #quickLinks {
+                width: 30%;
+            }
+        }
+    }
+}
