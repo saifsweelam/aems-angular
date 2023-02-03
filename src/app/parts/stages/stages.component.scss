@@ -1,0 +1,135 @@
+@import '../../../variables';
+
+$stages: kindergarten, middleSchool, highSchool;
+
+#stages {
+    .stage-radio {
+        display: none;
+    }
+
+    .stage-radio-labels {
+        display: flex;
+        justify-content: space-evenly;
+
+        .stage-radio-label {
+            padding: 1.5rem 0.5rem;
+            text-align: center;
+            font-weight: 700;
+            transition: background-color 0.4s;
+            cursor: pointer;
+
+        }
+    }
+
+    article {
+        display: none;
+    }
+
+    @each $stage in $stages {
+        ##{$stage}Radio:checked~ {
+            ##{$stage} {
+                display: block;
+            }
+        }
+    }
+
+    @media screen and (max-width: $screen-tablet) {
+        .stage-radio-labels {
+            align-items: center;
+
+            .stage-radio-label {
+                width: auto;
+                background-color: #FFF;
+                color: $primary-color;
+    
+                &::after {
+                    width: 15px;
+                    height: 15px;
+                    border: solid $primary-color;
+                    border-width: 0 3px 3px 0;
+                    display: inline-block;
+                    content: '';
+                }
+    
+                span { display: none; }
+            }
+        }
+
+
+        @each $stage in $stages {
+            ##{$stage}Radio:checked~ {
+                .stage-radio-labels {
+
+                    .stage-radio-label[for="#{$stage}Radio"] {
+                        width: 70%;
+                        cursor: auto;
+
+                        &::after {
+                            content: none;
+                        }
+
+                        span {display: block;}
+
+                        +.stage-radio-label {
+                            order: 1 !important;
+                            &::after {
+                                -webkit-transform: rotate(-45deg) !important;
+                                transform: rotate(-45deg) !important;
+                            }
+                        }
+
+                        ~ .stage-radio-label {
+                            order: -1;
+                            &::after {
+                                -webkit-transform: rotate(135deg);
+                                transform: rotate(135deg);
+                            }
+                        }
+                    }
+
+                    .stage-radio-label:has(+ .stage-radio-label[for="#{$stage}Radio"]) {
+                        order: -1 !important;
+                        &::after {
+                            -webkit-transform: rotate(135deg) !important;
+                            transform: rotate(135deg) !important;
+                        }
+                    }
+
+                    .stage-radio-label:has(~ .stage-radio-label[for="#{$stage}Radio"]) {
+                        order: 1;
+                        &::after {
+                            -webkit-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+
+                ##{$stage} {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $screen-tablet) {
+        .stage-radio-label {
+            width: calc(100% / 3);
+            text-transform: uppercase;
+            color: #FFF;
+            background-color: $primary-color;
+
+            &:hover {
+                background-color: mix($primary-color, #FFF, 92%);
+            }
+        }
+
+        @each $stage in $stages {
+            ##{$stage}Radio:checked~ {
+                .stage-radio-labels .stage-radio-label[for="#{$stage}Radio"] {
+                    background-color: #FFF;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

@@ -13,6 +13,7 @@ import { GalleryComponent } from './pages/gallery/gallery.component';
 import { LandingHeaderComponent } from './parts/landing-header/landing-header.component';
 import { InlineSVGModule } from 'ng-inline-svg-2';
 import { HttpClientModule } from '@angular/common/http';
+import { StagesComponent } from './parts/stages/stages.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     AdmissionComponent,
     LearningComponent,
     GalleryComponent,
-    LandingHeaderComponent
+    LandingHeaderComponent,
+    StagesComponent
   ],
   imports: [
     BrowserModule,
