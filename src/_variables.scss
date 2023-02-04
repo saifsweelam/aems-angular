@@ -17,8 +17,8 @@ $screen-largest: 1400px;
 $font-family: 'Inter', sans-serif;
 
 // Fluid Typography Settings
-$text-smallest: 13px;
-$text-largest: 17px;
+$text-smallest: 12px;
+$text-largest: 16px;
 
 @function strip-unit($number) {
     @return math.div($number, ($number * 0 + 1));

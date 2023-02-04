@@ -21,14 +21,55 @@ $stages: kindergarten, middleSchool, highSchool;
         }
     }
 
-    article {
+    .stage-tab {
         display: none;
+        padding: 3rem 2rem;
+
+        h4 { font-weight: 700; }
+
+        .stage-imgs {
+            img {
+                width: 100%;
+                margin-bottom: 3rem;
+            }
+        }
+
+        @media screen and (max-width: $screen-tablet-landscape) {
+            .stage-imgs {
+                img:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+
+        @media screen and (min-width: $screen-tablet-landscape) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            .stage-content {
+                width: 50%;
+
+                p {
+                    margin-bottom: 5rem;
+                }
+            }
+
+            .stage-imgs {
+                width: 30%;
+            }
+        }
     }
 
     @each $stage in $stages {
         ##{$stage}Radio:checked~ {
             ##{$stage} {
-                display: block;
+                @media screen and (max-width: $screen-tablet-landscape) {
+                    display: block;
+                }
+
+                @media screen and (min-width: $screen-tablet-landscape) {
+                    display: flex;
+                }
             }
         }
     }
