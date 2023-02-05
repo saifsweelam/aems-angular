@@ -17,6 +17,7 @@ body {
 #navComponent {
     position: fixed;
     top: 0;
+    z-index: 1;
     transition: background-color 0.4s;
     background-color: $primary-color;
 
