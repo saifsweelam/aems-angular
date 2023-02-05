@@ -1,0 +1,77 @@
+@import '../../../variables';
+
+#about {
+    padding: 3rem 2rem;
+
+    .about-article-body {
+        padding: 2rem 0;
+
+        .about-article-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+    
+        .about-article-subtitle {
+            font-weight: 700;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .about-article-img{
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @media screen and (max-width: $screen-tablet) {
+        background-color: $primary-color;
+        color: #FFF;
+
+        .about-article-img {
+            height: 280px;
+        }
+    }
+
+    @media screen and (min-width: $screen-tablet) {
+        background-color: mix(#FFF, $primary-color, 92%);
+
+        .about-article {
+            margin: 1rem 0;
+            display: flex;
+            justify-content: space-between;
+
+            .about-article-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 50%;
+            }
+
+            .about-article-img {
+                width: 50%;
+                min-height: 300px;
+            }
+
+            &:first-child {
+                .about-article-body {
+                    margin: 0 1.5rem 0 0;
+                }
+            }
+
+            &:nth-child(2) {
+                flex-direction: row-reverse;
+
+                .about-article-img {
+                    margin: 0 1.5rem 0 0;
+                }
+            }
+        }
+    }
+}
