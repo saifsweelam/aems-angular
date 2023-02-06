@@ -41,6 +41,7 @@
 
     @media screen and (min-width: $screen-tablet) {
         background-color: mix(#FFF, $primary-color, 92%);
+        color: $primary-color;
 
         .about-article {
             margin: 1rem 0;
