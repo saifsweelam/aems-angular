@@ -1,4 +1,5 @@
 @import '../../../variables';
+@import '../../../btn-mixins';
 
 #admissionInfo {
 
@@ -19,10 +20,18 @@
         }
 
         p { margin: 0; }
+
+        .admission-info-btn {
+            margin-top: 1rem;
+        }
     }
 
     @media screen and (max-width: $screen-tablet) {
         text-align: center;
+
+        .admission-info-btn {
+            @include outline-button($primary-color, #FFF);
+        }
     }
 
     @media screen and (min-width: $screen-tablet) {
@@ -43,7 +52,12 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: flex-start;
             width: 50%;
+
+            .admission-info-btn {
+                @include outline-button(#FFF, $primary-color);
+            }
         }
     }
 }
