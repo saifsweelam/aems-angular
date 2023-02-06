@@ -15,6 +15,7 @@ import { InlineSVGModule } from 'ng-inline-svg-2';
 import { HttpClientModule } from '@angular/common/http';
 import { StagesComponent } from './parts/stages/stages.component';
 import { AboutComponent } from './parts/about/about.component';
+import { AdmissionInfoComponent } from './parts/admission-info/admission-info.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AboutComponent } from './parts/about/about.component';
     GalleryComponent,
     LandingHeaderComponent,
     StagesComponent,
-    AboutComponent
+    AboutComponent,
+    AdmissionInfoComponent
   ],
   imports: [
     BrowserModule,

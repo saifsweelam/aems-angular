@@ -1,0 +1,49 @@
+@import '../../../variables';
+
+#admissionInfo {
+
+    .admission-info-img {
+        img {
+            width: 100%;
+            min-height: 400px;
+            object-fit: cover;
+        }
+    }
+
+    .admission-info-body {
+        padding: 3rem;
+
+        h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        p { margin: 0; }
+    }
+
+    @media screen and (max-width: $screen-tablet) {
+        text-align: center;
+    }
+
+    @media screen and (min-width: $screen-tablet) {
+        display: flex;
+        background-color: $primary-color;
+        background-image: linear-gradient(128deg, #0000 80%, $gradient-color);
+        color: #FFF;
+
+        .admission-info-img {
+            width: 50%;
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .admission-info-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%;
+        }
+    }
+}
