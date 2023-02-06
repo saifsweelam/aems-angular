@@ -50,8 +50,8 @@ body {
 
 .btn {
     display: inline-block;
-    border: none;
     outline: none;
+    margin: 0 0.25rem 0 0;
     text-decoration: none;
     border-radius: 8px;
     padding: 0.5rem 1rem;
@@ -60,6 +60,7 @@ body {
 
 .btn-primary {
     background-color: $primary-color;
+    border: 1px solid $primary-color;
     color: #FFF !important;
     fill: #FFF;
 
@@ -71,12 +72,39 @@ body {
 
 .btn-white {
     background-color: #FFF;
+    border: 1px solid #FFF;
     color: $primary-color !important;
     fill: $primary-color;
 
     &:hover,
     &:focus {
         background-color: darken(#FFF, 10%);
+    }
+}
+
+.btn-primary-outline {
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    fill: $primary-color;
+
+    &:hover,
+    &:focus {
+        background-color: $primary-color;
+        color: #FFF;
+    }
+}
+
+.btn-white-outline {
+    background-color: transparent;
+    border: 1px solid #FFF;
+    color: #FFF;
+    fill: $primary-color;
+
+    &:hover,
+    &:focus {
+        background-color: #FFF;
+        color: $primary-color;
     }
 }
 
