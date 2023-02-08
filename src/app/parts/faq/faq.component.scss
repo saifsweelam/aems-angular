@@ -26,7 +26,12 @@
                     justify-content: space-between;
                     align-items: center;
                     padding: 0.5rem;
+                    transition: background-color 0.4s;
                     cursor: pointer;
+
+                    &:hover {
+                        background-color: mix(#FFF, $primary-color, 92%);
+                    }
 
                     &::after {
                         content: '+';
