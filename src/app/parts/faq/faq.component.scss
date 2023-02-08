@@ -1,0 +1,86 @@
+@import '../../../variables';
+
+#faq {
+    padding: 3rem 2rem;
+
+    .faq-header {
+        margin: 0.5rem 0;
+
+        .faq-title {
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+
+    .faq-body {
+        .accordion {
+            .accordion-item {
+                border: 1px solid $primary-color;
+                border-radius: 15px;
+                margin: 0.5rem 0;
+                overflow: hidden;
+
+                .accordion-item-label {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0.5rem;
+                    cursor: pointer;
+
+                    &::after {
+                        content: '+';
+                        font-size: 1.1rem;
+                    }
+                }
+
+                .accordion-item-body {
+                    max-height: 0;
+                    overflow: hidden;
+                    background-color: $gradient-color;
+                    transition: max-height 0.4s;
+
+                    .accordion-item-container {
+                        border-top: 1px solid $primary-color;
+                        padding: 0.5rem;
+                    }
+                }
+                
+                .accordion-item-checkbox:checked ~ {
+                    .accordion-item-label {
+                        &::after {
+                            content: '-';
+                        }
+                    }
+                    
+                    .accordion-item-body {
+                        max-height: 400px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: $screen-tablet) {
+        .faq-header {
+            text-align: center;
+        }
+
+        .faq-body {
+            margin: 1rem 0;
+        }
+    }
+
+    @media screen and (min-width: $screen-tablet) {
+        display: flex;
+        justify-content: space-evenly;
+
+        .faq-header {
+            width: 30%;
+        }
+
+        .faq-body {
+            width: 50%;
+        }
+    }
+}

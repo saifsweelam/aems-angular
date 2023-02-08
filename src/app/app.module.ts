@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StagesComponent } from './parts/stages/stages.component';
 import { AboutComponent } from './parts/about/about.component';
 import { AdmissionInfoComponent } from './parts/admission-info/admission-info.component';
+import { FaqComponent } from './parts/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AdmissionInfoComponent } from './parts/admission-info/admission-info.co
     LandingHeaderComponent,
     StagesComponent,
     AboutComponent,
-    AdmissionInfoComponent
+    AdmissionInfoComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,
